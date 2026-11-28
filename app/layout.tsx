@@ -21,12 +21,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <nav className='flex gap-2 bg-amber-400 p-2'>
-        {/* Prefetched when the link is hovered or enters the viewport */}
-        <Link href="/contact" className='text-2xl text-blue-900'>contact</Link>
-        <Link href="/blog" className='text-2xl text-blue-900'>blog</Link>
-      </nav>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <nav className='flex gap-2 bg-amber-400 p-2'>
+          {/* Prefetched when the link is hovered or enters the viewport */}
+          <Link href="/contact" className='text-2xl text-blue-900'>contact</Link>
+          <Link href="/blog" className='text-2xl text-blue-900'>blog</Link>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

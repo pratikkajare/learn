@@ -25,7 +25,6 @@ export default function Contact() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-amber-700 font-sans">
       <h1 className="text-amber-300">I'm yellow!</h1>
-      <ClsxDemo />
     </div>
   );
 }
